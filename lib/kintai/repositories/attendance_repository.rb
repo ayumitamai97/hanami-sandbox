@@ -1,4 +1,12 @@
 class AttendanceRepository < Hanami::Repository
+  def record_time(user_id:, timestamp:)
+    if left?
+      attend(user_id: user_id, started_at: timestamp)
+    else
+      leave(id: last.id, ended_at: timestamp)
+    end
+  end
+
   def attend(user_id: nil, started_at: nil)
     if started_at.nil?
       stamp_attendance(user_id: user_id)
@@ -33,6 +41,10 @@ class AttendanceRepository < Hanami::Repository
 
   private
 
+  def left?
+    !last.ended_at.nil?
+  end
+
   def stamp_attendance(user_id:)
     create(user_id: user_id, started_at: Time.now, approved_at: Time.now)
   end
@@ -46,6 +58,6 @@ class AttendanceRepository < Hanami::Repository
   end
 
   def request_leave(id:, ended_at:)
-    update(id, ended_at: ended_at)
+    update(id, ended_at: ended_at, approved_at: nil)
   end
 end
