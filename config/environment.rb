@@ -35,6 +35,7 @@ Hanami.configure do
   end
 
   environment :development do
+    require 'pry'
     # See: http://hanamirb.org/guides/projects/logging
     logger level: :debug
   end
