@@ -101,7 +101,13 @@ Explore Hanami [guides](http://hanamirb.org/guides/), [API docs](http://docs.han
 - Railsで、strong parameterを使うほどではないがparamsのエイリアス的にstrong parameterを定義することがある
   Hanamiでそういう記法ができないことはもちろんないが、特に推奨されているわけではなさそう？
   Parameters#require, Parameters#permitとかなく、getしかなさそう？
+  - parameterもうちょっと扱いやすくならないんだろうか
+  - parameterをごちゃっと書く感じにならざるをえないので、controllerの行数は大きくなる
+    - controllerでバリデーションもするとさらに…
   
 - どうしても`entity.update`とかしたくなってしまうRails癖
 
 - 結局このメソッドってどの層に定義すればいいんだっけ？というのが今現在いまいちわかっていない ちゃんとDDD勉強した人がいる環境で導入しないかぎり結局つらそうではある
+
+- バリデーションまではまだ実装できていない(6/13 23時時点)ので、どういう感じが適切なのかわかっていない
+

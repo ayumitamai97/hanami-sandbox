@@ -10,6 +10,7 @@ module Web
               div do
                 p "Start at: #{attendance.started_at}"
                 p "End at: #{attendance.ended_at}"
+                p attendance.approved? ? 'Approved' : 'Not approved yet'
               end
             end
           end
