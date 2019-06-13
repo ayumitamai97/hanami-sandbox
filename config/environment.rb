@@ -40,6 +40,10 @@ Hanami.configure do
     logger level: :debug
   end
 
+  environment :test do
+    require 'pry'
+  end
+
   environment :production do
     logger level: :info, formatter: :json, filter: []
 
