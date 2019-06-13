@@ -7,5 +7,7 @@ class User < Hanami::Entity
     attribute :user_role, Types::Int
     attribute :created_at, Types::Time
     attribute :updated_at, Types::Time
+
+    attribute :attendances, Types::Strict::Array
   end
 end

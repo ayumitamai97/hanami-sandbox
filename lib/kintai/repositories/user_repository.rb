@@ -13,4 +13,8 @@ class UserRepository < Hanami::Repository
   def admin_users
     users.where(user_role: ADMIN_USER_ROLE)
   end
+
+  def find_with_attendances(user:)
+    aggregate(:attendances).where(id: user.id).map_to(User).one
+  end
 end
