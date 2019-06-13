@@ -3,4 +3,7 @@
 #
 # Example:
 # get '/hello', to: ->(env) { [200, {}, ['Hello from Hanami!']] }
+
+# NOTICE: namespace '/admin'
 get '/', to: 'home#index'
+get '/users', to: 'users#index'

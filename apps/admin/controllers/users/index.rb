@@ -1,8 +1,8 @@
-module Web
+module Admin
   module Controllers
     module Users
       class Index
-        include Web::Action
+        include Admin::Action
         expose :users, :repository
 
         def call(params)

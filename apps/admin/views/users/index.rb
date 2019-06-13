@@ -1,8 +1,8 @@
-module Web
+module Admin
   module Views
     module Users
       class Index
-        include Web::View
+        include Admin::View
 
         def title
           html.div do
