@@ -1,0 +1,5 @@
+= form_for :attendance, routes.attendances_path do
+  - div do
+    / TODO: implement login and get current user
+    = hidden_field :user_id, value: 1
+    - submit 'Stamp Attendance'

@@ -44,8 +44,6 @@ Explore Hanami [guides](http://hanamirb.org/guides/), [API docs](http://docs.han
   - MVCだったらModelに定数を定義してそこから読むことになりそう
     ```ruby
     class User
-      include ActiveModel::Model # とか？確認してない
-      
       ROLES = {
         0 => 'normal',
         1 => 'admin',
@@ -82,3 +80,6 @@ Explore Hanami [guides](http://hanamirb.org/guides/), [API docs](http://docs.han
   
 - 管理画面作るのめっちゃ楽
   - Rails Engineあんなに意味わからなかったのに、それに比べてRackをいい感じにラップしてくれている感……（ラップされているからこそよくわかっていないが）
+  
+- RESTを強く意識してなさそうな感じをroutingの記法とかgenerateされるcontroller (action) とかに感じる
+  - => 違った。Railsとほぼ同じように`resources`という書き方ができた ref. https://guides.hanamirb.org/routing/restful-resources/
