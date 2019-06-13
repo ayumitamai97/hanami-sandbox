@@ -1,11 +1,13 @@
 module Web
   module Controllers
     module Attendances
-      class New
+      class Edit
         include Web::Action
+        expose :attendance
 
         def call(params)
-          # TODO: ended_atがないattendanceがあったらとってきてended_atをうめる
+          repository = AttendanceRepository.new
+          @attendance = repository.find(params.get(:id))
         end
       end
     end
