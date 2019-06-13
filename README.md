@@ -74,3 +74,8 @@ Explore Hanami [guides](http://hanamirb.org/guides/), [API docs](http://docs.han
   ```
   なるほど〜 これが Pure Ruby に近い点……？（マジックが少ない）
   
+- 公式のドキュメンテーションがとても読みやすい…… Railsの api.rubyonrails.org, Rails Guides のように散らばっていなくて良い
+
+- Viewが分割できるの慣れないがとてもやりやすい
+  - ただ、これはこれで面倒で、スタートアップに向いてない理由もよくわかる
+  - ちょっとした管理画面とかを作るにはオーバーな気がしなくもない
