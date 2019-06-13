@@ -56,3 +56,13 @@ Explore Hanami [guides](http://hanamirb.org/guides/), [API docs](http://docs.han
     end
     ```
   - この辺りの `0` とか `1` を知っていたくないので、`Repository` の債務にするのが良さそう
+  - => lib/kintai/repositories/user_repository.rb:6 あたりに定義した
+    - ref. modelを呼びたい側で `UserRepository.new.where(user_role: 1)` とかするの絶対よくない 責務が分散してしまうので
+    - ……ので、repositoryにはリソースにわかりやすい名前をつけるのが良さそう
+
+- Entityが不変だとか、EntityとRepositoryの責務とか、やってみるとわかる
+- 入力値のバリデーションをControllerでするのはあまり好きではないかも……と思っていたが、
+  - Railsで予期せぬところで `undefined method #hoge for nil:NilClass` とか出るとテンション下がるし
+  - ↑を避けるために `#try` しまくるのも辛い気がしたので、（それがデファクトスタンダードである限りは）Controllerでバリデーションするのも納得できるな、と思った
+  - ただ、Rails Wayから若干外れた(?)Rails開発でFormObjectとか使っていて、そこでバリデーションできるのなかなかいい気がしている
+  - Hanamiにおける↑はInteractorかな ref. https://magazine.rubyist.net/articles/0056/0056-hanami.html
