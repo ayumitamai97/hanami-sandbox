@@ -1,4 +1,8 @@
 class UserRepository < Hanami::Repository
+  associations do
+    has_many :attendances
+  end
+
   NORMAL_USER_ROLE = 0
   ADMIN_USER_ROLE = 1
 

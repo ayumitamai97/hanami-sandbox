@@ -66,3 +66,11 @@ Explore Hanami [guides](http://hanamirb.org/guides/), [API docs](http://docs.han
   - ↑を避けるために `#try` しまくるのも辛い気がしたので、（それがデファクトスタンダードである限りは）Controllerでバリデーションするのも納得できるな、と思った
   - ただ、Rails Wayから若干外れた(?)Rails開発でFormObjectとか使っていて、そこでバリデーションできるのなかなかいい気がしている
   - Hanamiにおける↑はInteractorかな ref. https://magazine.rubyist.net/articles/0056/0056-hanami.html
+  
+- HanamiのAssociationについてのidea 'Explicit Interface' (and 'Explicit Loading')
+  ```
+  When we declare an association, that repository does NOT get any extra method to its public interface.
+  This because Hanami wants to prevent to bloat in repositories by adding methods that are often never used.
+  ```
+  なるほど〜 これが Pure Ruby に近い点……？（マジックが少ない）
+  
