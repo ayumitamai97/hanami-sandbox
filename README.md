@@ -71,6 +71,7 @@ Explore Hanami [guides](http://hanamirb.org/guides/), [API docs](http://docs.han
   This because Hanami wants to prevent to bloat in repositories by adding methods that are often never used.
   ```
   なるほど〜 これが Pure Ruby に近い点……？（マジックが少ない）
+  - Controllerの`.expose`も同様、黒魔術を減らして各クラスの責務/各メソッドのスコープを明示化している気がする
   
 - 公式のドキュメンテーションがとても読みやすい…… Railsの api.rubyonrails.org, Rails Guides のように散らばっていなくて良い
 
@@ -83,3 +84,24 @@ Explore Hanami [guides](http://hanamirb.org/guides/), [API docs](http://docs.han
   
 - RESTを強く意識してなさそうな感じをroutingの記法とかgenerateされるcontroller (action) とかに感じる
   - => 違った。Railsとほぼ同じように`resources`という書き方ができた ref. https://guides.hanamirb.org/routing/restful-resources/
+  - resourceではなくactionがclassとして定義されるので、当然必然的にFat Controllerっぽく'見える'ことはなさそうだし、
+    基本的にControllerはRepository層で定義されたメソッドを使用して必要最低限の変数を返す&HTTPレスポンスを返すだけなので、
+    ほんとに薄め〜になりそう。現場でHanamiを採用している会社はなかなか少なそうだが、現場ではどうなんだろうか
+  
+  
+- 世間一般(?)に言われるHanamiの特徴に納得した
+  （黒魔術が少ない、長期運用に向いている、Railsと似てはいないがRailsがそこそこうまく使えたらHanamiも使える）
+
+- ビューヘルパーの使い勝手がRailsと似てるように見えてそうでもないというか、あんまり高機能じゃない気がする…（だからこそ黒魔術じゃなくていいのだが）
+  - views/の記法は良い
+  - templates/がシンプルになるのもいい
+  - ビューヘルパーというかform helperが ... :thinking:
+  - viewがなんかつらい気がする、RailsのAPIモードみたいな感じで使ったらよさそう……？
+  
+- Railsで、strong parameterを使うほどではないがparamsのエイリアス的にstrong parameterを定義することがある
+  Hanamiでそういう記法ができないことはもちろんないが、特に推奨されているわけではなさそう？
+  Parameters#require, Parameters#permitとかなく、getしかなさそう？
+  
+- どうしても`entity.update`とかしたくなってしまうRails癖
+
+- 結局このメソッドってどの層に定義すればいいんだっけ？というのが今現在いまいちわかっていない ちゃんとDDD勉強した人がいる環境で導入しないかぎり結局つらそうではある

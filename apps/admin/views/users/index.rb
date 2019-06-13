@@ -15,17 +15,10 @@ module Admin
             users.each do |user|
               div do
                 p "Email: #{user.email}"
-                p "Role: #{role(user: user)}"
+                p "Role: #{user.role}"
               end
             end
           end
-        end
-
-        private
-
-        def role(user:)
-          # FIXME N+1 problem どうすればいいんだ……
-          repository.role(id: user.id)
         end
       end
     end
