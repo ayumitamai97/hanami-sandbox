@@ -7,3 +7,4 @@
 # NOTICE: namespace '/admin'
 get '/', to: 'home#index'
 get '/users', to: 'users#index'
+resources :attendances, only: %i[index update]

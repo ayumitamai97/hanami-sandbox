@@ -9,6 +9,6 @@ RSpec.describe AttendanceRepository, type: :repository do
 
   it 'user has_many attendance stamps' do
     expect { repository.stamp_attendance(user_id: user.id) }
-      .to change { UserRepository.new.find_with_attendances(user: user).attendances.count }.by(1)
+      .to change { UserRepository.new.find_with_attendances(user_id: user.id).attendances.count }.by(1)
   end
 end

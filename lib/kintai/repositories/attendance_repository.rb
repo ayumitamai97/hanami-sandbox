@@ -19,8 +19,16 @@ class AttendanceRepository < Hanami::Repository
     attendances.where('approved_at IS NOT NULL')
   end
 
+  def not_approved_attendances
+    attendances.where('approved_at IS NULL AND ended_at IS NOT NULL')
+  end
+
   def users_attendances(user_id:)
     attendances.where(user_id: user_id)
+  end
+
+  def approve(id:)
+    update(id, approved_at: Time.now)
   end
 
   private
