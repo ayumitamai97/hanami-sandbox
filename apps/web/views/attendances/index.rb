@@ -10,7 +10,10 @@ module Web
               div do
                 p "Start at: #{attendance.started_at}"
                 p "End at: #{attendance.ended_at}"
-                p attendance.approved? ? 'Approved' : 'Not approved yet'
+                p do
+                  span attendance.approved? ? 'Approved' : 'Not approved yet'
+                  span link_to 'Edit', routes.edit_attendance_path(attendance.id)
+                end
               end
             end
           end

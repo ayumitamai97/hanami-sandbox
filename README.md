@@ -111,3 +111,15 @@ Explore Hanami [guides](http://hanamirb.org/guides/), [API docs](http://docs.han
 
 - バリデーションまではまだ実装できていない(6/13 23時時点)ので、どういう感じが適切なのかわかっていない
 
+- RailsのMVC + FormObject, Service class, [ApplicationModelのある風景](https://speakerdeck.com/hshimoyama/rails-with-applicationmodel), [Decorator](https://github.com/amatsuda/active_decorator), ViewModel, ... など
+  Rails Wayから外れつつもなるべく長期的に運用しやすくする設計は明確なガイドラインがなく、いつのまにかapp直下のディレクトリが増えてたりとかする気がする…
+  - それに対してHanamiはどちらかといえば明確なガイドラインがあるので、Wayに沿っていれば長期運用しやすく煩雑な多機能クラスが生まれたりとかもあんまりしなさそう???(夢見すぎ?) 
+  - どこにかけばいいの？問題がわりと起きづらそう
+  
+# 読んだ
+- https://magazine.rubyist.net/articles/0056/0056-hanami.html
+- https://nrslib.com/clean-ddd-entity/
+- https://speakerdeck.com/hshimoyama/rails-with-applicationmodel
+- https://speakerdeck.com/joker1007/realworld-domain-model-on-rails
+- https://speakerdeck.com/joker1007/number-ginzarb
+- https://speakerdeck.com/yasaichi/what-is-ruby-on-rails-and-how-to-deal-with-it
