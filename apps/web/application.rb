@@ -1,5 +1,6 @@
 require 'hanami/helpers'
 require 'hanami/assets'
+require 'sass'
 
 module Web
   class Application < Hanami::Application
