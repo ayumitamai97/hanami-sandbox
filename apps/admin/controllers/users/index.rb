@@ -3,11 +3,10 @@ module Admin
     module Users
       class Index
         include Admin::Action
-        expose :users, :repository
+        expose :users
 
         def call(params)
-          @repository = UserRepository.new # FIXME: この行ここでいいのか？
-          @users = repository.all
+          @users = UserRepository.new.all
         end
       end
     end
