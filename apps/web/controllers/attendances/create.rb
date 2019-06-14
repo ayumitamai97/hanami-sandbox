@@ -10,6 +10,7 @@ module Web
             timestamp: params.get(:attendance, :timestamp).nil? ? nil : Time.parse(params.get(:attendance, :timestamp))
           )
 
+          flash[:success] = 'Successfully record stamping'
           redirect_to '/attendances'
         end
       end

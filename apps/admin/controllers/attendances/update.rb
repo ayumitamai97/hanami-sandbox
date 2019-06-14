@@ -9,6 +9,7 @@ module Admin
           attendance = repository.find(params.get(:id))
           repository.approve(id: attendance.id)
 
+          flash[:success] = 'Successfully approved attendance'
           redirect_to '/admin/attendances'
         end
       end

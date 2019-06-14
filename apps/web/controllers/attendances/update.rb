@@ -14,6 +14,7 @@ module Web
             approved_at: nil
           )
 
+          flash[:success] = 'Successfully requested stamping'
           redirect_to '/attendances'
         end
       end

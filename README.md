@@ -119,6 +119,8 @@ Explore Hanami [guides](http://hanamirb.org/guides/), [API docs](http://docs.han
     - と思ったが, Railsにおけるview helperとかどこに定義すればいいのかわからない
     - => view helperは `Web::Views::ApplicationLayout` とかか
 
+- Railsのview file内でflash表示する条件分岐が何気に鬱陶しかったので、Hanamiのapps/*/views/ 良い……
+  - ただ、どこで共通化すればいいのかわからん
   
 # 読んだ
 - https://magazine.rubyist.net/articles/0056/0056-hanami.html

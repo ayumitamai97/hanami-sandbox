@@ -2,5 +2,7 @@
 /tmp
 .idea/
 .env*
-package-lock.json
-node_modules/
+apps/web/node_modules/
+apps/admin/node_modules/
+apps/web/frontend/dist/
+apps/admin/frontend/dist/
