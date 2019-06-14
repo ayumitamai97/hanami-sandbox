@@ -143,7 +143,7 @@ module Web
         # Specify sources for assets
         #
         sources << [
-          'assets'
+          'frontend/dist'
         ]
       end
 
