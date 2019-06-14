@@ -9,8 +9,9 @@ module Web
           attendance = repository.find(params.get(:attendance, :id))
           repository.update(
             attendance.id,
-            started_at: params.get(:attendance, :started_at),
-            ended_at: params.get(:attendance, :ended_at)
+            started_at: Time.parse(params.get(:attendance, :started_at)),
+            ended_at: Time.parse(params.get(:attendance, :ended_at)),
+            approved_at: nil
           )
 
           redirect_to '/attendances'

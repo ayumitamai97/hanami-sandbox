@@ -1,9 +1,1 @@
-= form_for :attendance, routes.attendance_path(attendance.id), method: :patch do
-  - div do
-    / TODO: implement login and get current user
-    / TODO: views/に置く
-    = hidden_field :id, value: attendance.id
-    = hidden_field :user_id, value: 1
-    = datetime_field :started_at
-    = datetime_field :ended_at
-    - submit 'Request Attendance Stamp'
+= attendance_update_request_form
