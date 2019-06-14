@@ -1,0 +1,37 @@
+{
+  "name": "kintai",
+  "version": "1.0.0",
+  "description": "Welcome to your new Hanami project!",
+  "main": "index.js",
+  "directories": {
+    "../../lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ayumitamai97/hanami-sandbox.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ayumitamai97/hanami-sandbox/issues"
+  },
+  "homepage": "https://github.com/ayumitamai97/hanami-sandbox#readme",
+  "devDependencies": {
+    "webpack": "^4.34.0",
+    "webpack-cli": "^3.3.4"
+  },
+  "dependencies": {
+    "bootstrap": "^4.3.1",
+    "css-loader": "^3.0.0",
+    "jquery": "^3.4.1",
+    "popper.js": "^1.15.0",
+    "style-loader": "^0.23.1",
+    "webpack-dev-server": "^3.7.1",
+    "webpack-manifest-plugin": "^2.0.4",
+    "yarn": "^1.16.0"
+  }
+}

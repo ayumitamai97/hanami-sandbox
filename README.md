@@ -116,6 +116,8 @@ Explore Hanami [guides](http://hanamirb.org/guides/), [API docs](http://docs.han
   - それに対してHanamiはどちらかといえば明確なガイドラインがあるので、Wayに沿っていれば長期運用しやすく煩雑な多機能クラスが生まれたりとかもあんまりしなさそう???(夢見すぎ?) 
   - どこにかけばいいの？問題がわりと起きづらそう
     - と思ったが, Railsにおけるview helperとかどこに定義すればいいのかわからない
+    - => view helperは `Web::Views::ApplicationLayout` とかか
+
   
 # 読んだ
 - https://magazine.rubyist.net/articles/0056/0056-hanami.html
