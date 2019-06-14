@@ -74,6 +74,7 @@ Explore Hanami [guides](http://hanamirb.org/guides/), [API docs](http://docs.han
   - Controllerの`.expose`も同様、黒魔術を減らして各クラスの責務/各メソッドのスコープを明示化している気がする
   
 - 公式のドキュメンテーションがとても読みやすい…… Railsの api.rubyonrails.org, Rails Guides のように散らばっていなくて良い
+  - ただ非公式の情報が少なくてエラーとかに当たった時に完全自力で解決しないといけないことが多そう
 
 - Viewが分割できるの慣れないがとてもやりやすい
   - ただ、これはこれで面倒で、スタートアップに向いてない理由もよくわかる
