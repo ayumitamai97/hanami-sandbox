@@ -85,7 +85,7 @@ Explore Hanami [guides](http://hanamirb.org/guides/), [API docs](http://docs.han
 - RESTを強く意識してなさそうな感じをroutingの記法とかgenerateされるcontroller (action) とかに感じる
   - => 違った。Railsとほぼ同じように`resources`という書き方ができた ref. https://guides.hanamirb.org/routing/restful-resources/
   - resourceではなくactionがclassとして定義されるので、当然必然的にFat Controllerっぽく'見える'ことはなさそうだし、
-    基本的にControllerはRepository層で定義されたメソッドを使用して必要最低限の変数を返す&HTTPレスポンスを返すだけなので、
+    基本的にControllerはRepository層で定義されたメソッドを使用してデータを間接的に操作し、viewに必要最低限の変数を返す&HTTPレスポンスを返すだけなので、
     ほんとに薄め〜になりそう。現場でHanamiを採用している会社はなかなか少なそうだが、現場ではどうなんだろうか
   
   
