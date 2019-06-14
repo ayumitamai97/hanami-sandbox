@@ -115,7 +115,9 @@ Explore Hanami [guides](http://hanamirb.org/guides/), [API docs](http://docs.han
   Rails Wayから外れつつもなるべく長期的に運用しやすくする設計は明確なガイドラインがなく、いつのまにかapp直下のディレクトリが増えてたりとかする気がする…
   - それに対してHanamiはどちらかといえば明確なガイドラインがあるので、Wayに沿っていれば長期運用しやすく煩雑な多機能クラスが生まれたりとかもあんまりしなさそう???(夢見すぎ?) 
   - どこにかけばいいの？問題がわりと起きづらそう
-    - view helperは `Web::Views::ApplicationLayout` とかか
+    - と思ったが, Railsにおけるview helperとかどこに定義すればいいのかわからない
+    - => view helperは `Web::Views::ApplicationLayout` とかか
+
   
 # 読んだ
 - https://magazine.rubyist.net/articles/0056/0056-hanami.html
